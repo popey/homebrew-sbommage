@@ -9,7 +9,7 @@ class Sbommage < Formula
 
   resource "textual" do
     url "https://files.pythonhosted.org/packages/source/t/textual/textual-0.85.2.tar.gz"
-    sha256 "c876cae596b9de27cfbcddb5fce26b7a30e0e73f2d62b6a3e69c8d61e9f30a55"
+    sha256 "2a416995c49d5381a81d0a6fd23925cb0e3f14b4f239ed05f35fa3c981bb1df2"
   end
 
   def install
