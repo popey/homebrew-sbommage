@@ -23,6 +23,11 @@ class Sbommage < Formula
     url "https://files.pythonhosted.org/packages/source/t/typing-extensions/typing_extensions-4.14.1.tar.gz"
     sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
   end
+
+  resource "platformdirs" do
+    url "https://files.pythonhosted.org/packages/source/p/platformdirs/platformdirs-4.3.6.tar.gz"
+    sha256 "357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"
+  end
   
   def install
     python3 = "python3.11"
