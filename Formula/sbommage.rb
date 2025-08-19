@@ -12,12 +12,8 @@ class Sbommage < Formula
     sha256 "2a416995c49d5381a81d0a6fd23925cb0e3f14b4f239ed05f35fa3c981bb1df2"
   end
 
-   def install                                                                                                                                │ │
-     virtualenv_install_with_resources                                                                                                        │ │
-     python3 = "python3.11"                                                                                                                   │ │
-     venv = virtualenv_create(libexec, python3)                                                                                               │ │
-     venv.pip_install resources                                                                                                               │ │
-     venv.pip_install_and_link buildpath
+  def install
+    virtualenv_install_with_resources
   end
 
   test do
