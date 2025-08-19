@@ -1,8 +1,8 @@
 class Sbommage < Formula
   desc "Interactive terminal frontend for viewing Software Bill of Materials (SBOM) files"
   homepage "https://github.com/popey/sbommage"
-  url "https://github.com/popey/sbommage/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "d7efdcbb4a7dd19e1f0006cd1760f407c8b4dab2971c97420111443cc7f2a151"
+  url "https://github.com/popey/sbommage/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "383ea408f380811c930f8d0ed470bcbb8c1b33fa1d39e653f0e6c623db38e6af"
   license "MIT"
 
   depends_on "python@3.11"
@@ -10,10 +10,15 @@ class Sbommage < Formula
   include Language::Python::Virtualenv
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/source/t/textual/textual-0.85.2.tar.gz"
-    sha256 "2a416995c49d5381a81d0a6fd23925cb0e3f14b4f239ed05f35fa3c981bb1df2"
+    url "https://files.pythonhosted.org/packages/source/t/textual/textual-5.3.0.tar.gz"
+    sha256 "1b6128b339adef2e298cc23ab4777180443240ece5c232f29b22960efd658d4d"
   end
 
+  resource "rich" do
+    url "https://files.pythonhosted.org/packages/source/r/rich/rich-13.9.4.tar.gz"
+    sha256 "439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"
+  end
+  
   def install
     python3 = "python3.11"
     venv = virtualenv_create(libexec, python3)
