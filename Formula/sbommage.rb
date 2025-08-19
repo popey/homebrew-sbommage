@@ -2,7 +2,7 @@ class Sbommage < Formula
   desc "Interactive terminal frontend for viewing Software Bill of Materials (SBOM) files"
   homepage "https://github.com/popey/sbommage"
   url "https://github.com/popey/sbommage/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "383ea408f380811c930f8d0ed470bcbb8c1b33fa1d39e653f0e6c623db38e6af"
+  sha256 "b2637dd17dda70b0b3405056ee40a697029a315e0217bd2a57d503a9d5b02bf5"
   license "MIT"
 
   depends_on "python@3.11"
