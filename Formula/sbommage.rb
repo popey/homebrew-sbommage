@@ -7,6 +7,8 @@ class Sbommage < Formula
 
   depends_on "python@3.11"
 
+  include Language::Python::Virtualenv
+
   resource "textual" do
     url "https://files.pythonhosted.org/packages/source/t/textual/textual-0.85.2.tar.gz"
     sha256 "2a416995c49d5381a81d0a6fd23925cb0e3f14b4f239ed05f35fa3c981bb1df2"
@@ -15,18 +17,15 @@ class Sbommage < Formula
   def install
     python3 = "python3.11"
     venv = virtualenv_create(libexec, python3)
-    
-    # Install resources first
+
     resources.each do |r|
       venv.pip_install r
     end
-    
-    # Install the main package
+
     venv.pip_install_and_link buildpath
   end
 
   test do
-    # Test that the command exists and shows help
     system bin/"sbommage", "--help"
   end
 end
