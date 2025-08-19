@@ -13,7 +13,16 @@ class Sbommage < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    python3 = "python3.11"
+    venv = virtualenv_create(libexec, python3)
+    
+    # Install resources first
+    resources.each do |r|
+      venv.pip_install r
+    end
+    
+    # Install the main package
+    venv.pip_install_and_link buildpath
   end
 
   test do
