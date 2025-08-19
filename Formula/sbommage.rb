@@ -38,7 +38,12 @@ class Sbommage < Formula
     url "https://files.pythonhosted.org/packages/source/m/mdurl/mdurl-0.1.2.tar.gz"
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
-  
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/source/p/pygments/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+  end
+    
   def install
     python3 = "python3.11"
     venv = virtualenv_create(libexec, python3)
