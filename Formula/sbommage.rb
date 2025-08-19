@@ -18,6 +18,11 @@ class Sbommage < Formula
     url "https://files.pythonhosted.org/packages/source/r/rich/rich-13.9.4.tar.gz"
     sha256 "439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"
   end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/source/t/typing-extensions/typing_extensions-4.14.1.tar.gz"
+    sha256 "38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"
+  end
   
   def install
     python3 = "python3.11"
